@@ -16,11 +16,11 @@ const prisma = new PrismaClient();
     });
 
     interface CloudinaryUploadResult {
-        public_id: string;
-        bytes: number;
-        duration?: number;
-        [key:string]: any;
-    }
+    public_id: string;
+    bytes: number;
+    duration?: number;
+    [key:string]: unknown;
+}
 
     export async function POST(request: NextRequest) {
         const { userId } = await auth();

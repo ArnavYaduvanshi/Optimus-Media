@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react'
 import { CldImage } from 'next-cloudinary';
-import { UploadIcon, ImageIcon, DownloadIcon, Crop, Palette, CheckCircleIcon } from 'lucide-react';
+import {  UploadIcon, DownloadIcon, Crop, Palette, CheckCircleIcon } from 'lucide-react';
 
 const socialFormats = {
   "Instagram Square (1:1)": { width: 1080, height: 1080, aspectRatio: "1:1" },

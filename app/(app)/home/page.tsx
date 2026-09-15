@@ -19,7 +19,7 @@ function Home() {
 
       if (Array.isArray(response.data)) {
         // Ensure all required properties exist
-        const normalizedVideos = response.data.map((video: any) => ({
+        const normalizedVideos = response.data.map((video: Video & { originalSize?: string }) => ({
           ...video,
           originalSize: video.originalSize ?? video.orginalSize ?? "",
           updatedAt: video.updatedAt ? new Date(video.updatedAt) : new Date(),

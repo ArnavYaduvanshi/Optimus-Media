@@ -11,10 +11,10 @@ import{auth} from '@clerk/nextjs/server'
         api_secret: process.env.CLOUDINARY_API_SECRET
     });
 
-    interface CloudinaryUploadResult {
-        public_id: string;
-        [key:string]: any;
-    }
+interface CloudinaryUploadResult {
+    public_id: string;
+    [key:string]: unknown;
+}
 
     export async function POST(request: NextRequest) {
         const { userId } = await auth();
